@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.activity.minggu1.Minggu1Activity">
+
+        <FrameLayout
+            android:id="@+id/frame"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_220dp"
+            app:layout_constraintTop_toTopOf="parent">
+            <VideoView
+                android:id="@+id/video_view"
+                android:layout_width="match_parent"
+                android:layout_height="250dp" />
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/frame"
+            android:layout_marginTop="@dimen/_16dp"
+            android:layout_marginStart="@dimen/_16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            style="@style/titleBigBold"
+            android:text="Perkenalan Tari Boda" />
+
+        <TextView
+            android:id="@+id/tv_instruksi"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_title"
+            android:layout_marginHorizontal="@dimen/_16dp"
+            style="@style/titleNameDesc"
+            android:layout_marginTop="@dimen/_10dp"
+            android:text="@string/instruksi" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayout4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10dp"
+            android:layout_marginHorizontal="@dimen/_16dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            app:endIconMode="clear_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_instruksi">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/komentar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
+                android:hint="Komentar"
+                android:lines="5"
+                android:inputType="textMultiLine"
+                android:gravity="top"
+                android:scrollbars="vertical"
+                android:scrollbarStyle="insideInset"
+                android:scrollHorizontally="false" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayout5"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10dp"
+            android:layout_marginHorizontal="@dimen/_16dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            app:endIconMode="clear_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textInputLayout4">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/nilai"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
+                android:hint="Nilai"
+                android:visibility="gone"
+                android:inputType="text"
+                android:gravity="top"
+                android:scrollbars="vertical"
+                android:scrollbarStyle="insideInset"
+                android:scrollHorizontally="false" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <Button
+            android:id="@+id/btn_kirim"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_16dp"
+            android:layout_marginBottom="@dimen/_20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:text="Kirim"
+            android:textAllCaps="false" />
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

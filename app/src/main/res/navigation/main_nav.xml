@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav"
+    app:startDestination="@id/baseFragment">
+
+    <fragment
+        android:id="@+id/baseFragment"
+        android:name="com.autodhil.tutarisiswa.ui.fragment.BaseFragment"
+        android:label="fragment_base"
+        tools:layout="@layout/fragment_base" />
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.autodhil.tutarisiswa.ui.fragment.home.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/tugasFragment"
+        android:name="com.autodhil.tutarisiswa.ui.fragment.tugas.TugasFragment"
+        android:label="fragment_tugas"
+        tools:layout="@layout/fragment_tugas" />
+    <fragment
+        android:id="@+id/profilFragment"
+        android:name="com.autodhil.tutarisiswa.ui.fragment.profil.ProfilFragment"
+        android:label="fragment_profil"
+        tools:layout="@layout/fragment_profil" />
+    <fragment
+        android:id="@+id/latihanFragment"
+        android:name="com.autodhil.tutarisiswa.ui.fragment.latihan.LatihanFragment"
+        android:label="LatihanFragment" />
+</navigation>

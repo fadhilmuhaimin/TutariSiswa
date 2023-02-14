@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        tools:context=".MainActivity">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#EFF5F8"
+            android:paddingBottom="@dimen/_80dp">
+
+            <TextView
+                android:id="@+id/text"
+                style="@style/titleBig"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_16dp"
+                android:layout_marginTop="@dimen/_16dp"
+                android:lineHeight="@dimen/_25dp"
+
+                android:text="@string/selamat_datang_nsiswa"
+                android:textColor="@android:color/black"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:id="@+id/line"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="@dimen/_16dp"
+                android:background="@drawable/bg_corner_top"
+                android:elevation="0dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/frame" />
+
+            <FrameLayout
+                android:id="@+id/frame"
+                style="@style/rapih"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_200dp"
+                android:layout_marginEnd="@dimen/_16dp"
+                android:background="@drawable/rounded_video_background"
+                android:outlineProvider="background"
+                app:layout_constraintTop_toBottomOf="@id/text"
+
+                >
+
+                <VideoView
+                    android:id="@+id/video_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center" />
+
+            </FrameLayout>
+
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.5" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardMateri1"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_180dp"
+                android:layout_marginStart="@dimen/_16dp"
+                android:layout_marginTop="@dimen/_16dp"
+                android:layout_marginEnd="@dimen/_8dp"
+                app:cardCornerRadius="@dimen/_8dp"
+                app:layout_constraintEnd_toStartOf="@id/guideline2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/line">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/frame1">
+
+                    <TextView
+                        android:id="@+id/judul_materi_1"
+                        style="@style/titleNamePermission"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_16dp"
+                        android:layout_marginTop="@dimen/_16dp"
+                        android:text="Materi 1"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        style="@style/titleNameDesc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_16dp"
+                        android:layout_marginTop="@dimen/_4dp"
+                        android:text="2 Menit"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/judul_materi_1" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card2"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_180dp"
+                android:layout_marginStart="@dimen/_8dp"
+                android:layout_marginTop="@dimen/_16dp"
+                android:layout_marginEnd="@dimen/_16dp"
+                app:cardCornerRadius="@dimen/_8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/guideline2"
+                app:layout_constraintTop_toTopOf="@id/line">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/frame2">
+
+                    <TextView
+                        android:id="@+id/judul_materi_2"
+                        style="@style/titleNamePermission"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_16dp"
+                        android:layout_marginTop="@dimen/_16dp"
+                        android:text="Materi 1"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        style="@style/titleNameDesc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_16dp"
+                        android:layout_marginTop="@dimen/_4dp"
+                        android:text="2 Menit"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/judul_materi_2" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card3"
+                style="@style/rapih"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_180dp"
+                android:layout_marginEnd="@dimen/_16dp"
+                app:cardCornerRadius="@dimen/_8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/card2">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/frame3">
+
+                    <TextView
+                        android:id="@+id/judul_materi_3"
+                        style="@style/titleNamePermission"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_16dp"
+                        android:layout_marginTop="@dimen/_16dp"
+                        android:text="Materi 1"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        style="@style/titleNameDesc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_16dp"
+                        android:layout_marginTop="@dimen/_4dp"
+                        android:text="2 Menit"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/judul_materi_3" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/judul_latihan"
+                style="@style/titleHome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_16dp"
+                android:layout_marginTop="@dimen/_16dp"
+                android:text="Latihan"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/card3" />
+
+            <androidx.cardview.widget.CardView
+
+                android:id="@+id/latihan"
+                style="@style/rapih"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_80dp"
+                android:layout_marginEnd="@dimen/_16dp"
+                app:cardCornerRadius="@dimen/_8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/judul_latihan">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/play_icon"
+                        android:layout_width="@dimen/_40dp"
+                        android:layout_height="@dimen/_40dp"
+                        android:layout_marginStart="@dimen/_16dp"
+                        android:src="@drawable/ic_baseline_play_circle_filled_24"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        style="@style/titleNamePermission"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_8dp"
+                        android:text="Metronom Tari Boda"
+                        app:layout_constraintBottom_toBottomOf="@id/play_icon"
+                        app:layout_constraintStart_toEndOf="@id/play_icon"
+                        app:layout_constraintTop_toTopOf="@id/play_icon" />
+
+                    <ImageView
+                        android:id="@+id/arrow"
+                        android:layout_width="@dimen/_30dp"
+                        android:layout_height="@dimen/_30dp"
+                        android:layout_marginEnd="@dimen/_16dp"
+                        android:src="@drawable/ic_baseline_keyboard_arrow_right_24"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+</layout>

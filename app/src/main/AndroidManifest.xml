@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.autodhil.tutarisiswa">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission
+        android:name="android.permission.CAPTURE_VIDEO_OUTPUT"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+
+    <uses-feature android:name="android.hardware.camera.any" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="28" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.TutariSiswa"
+        android:windowSoftInputMode="adjustResize">
+        <activity
+            android:name=".TugasAkhirActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.activity.minggu2.PreviewActivity"
+            android:exported="false"
+            android:noHistory="true"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".ui.activity.minggu2.RecordActivity"
+            android:exported="false"
+            android:noHistory="true"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".ui.CobaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.activity.minggu2.PlayerActivity"
+            android:exported="false"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".ui.activity.minggu2.Minggu2Activity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.activity.minggu1.Minggu1Activity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".ui.auth.AutentikasiActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.splash.SplashActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+    </application>
+
+</manifest>

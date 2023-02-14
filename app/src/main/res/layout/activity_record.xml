@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activity.minggu2.RecordActivity">
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+
+    <androidx.camera.view.PreviewView
+        android:id="@+id/previewView"
+        android:background="@color/bkPurple"
+        android:layout_marginEnd="@dimen/_8dp"
+        android:layout_marginStart="@dimen/_16dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/guideline5"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="H,16:9"/>
+
+    <Button
+        android:id="@+id/btn_mulai"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/previewView"
+        app:layout_constraintBottom_toBottomOf="parent"
+       android:layout_marginEnd="@dimen/_8dp"
+        app:layout_constraintEnd_toStartOf="@id/garis1"
+        android:text="Mulai"
+
+        android:textAllCaps="false"/>
+    <View
+        android:id="@+id/garis1"
+        android:layout_width="1dp"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="@id/previewView"
+        app:layout_constraintEnd_toEndOf="@id/previewView"
+        app:layout_constraintTop_toBottomOf="@id/previewView"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <Button
+        android:id="@+id/btn_stop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/garis1"
+        android:layout_marginStart="8dp"
+        app:layout_constraintTop_toBottomOf="@id/previewView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="Stop"
+        android:textAllCaps="false"
+
+        />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/quality_selection"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:background="?android:attr/activatedBackgroundIndicator"
+        android:choiceMode="singleChoice"
+        android:layout_centerVertical="false"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="@id/previewView"
+        app:layout_constraintTop_toTopOf="@id/previewView"/>
+
+    <ImageButton
+        android:id="@+id/camera_button"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="13dp"
+
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toTopOf="@+id/previewView"
+        app:layout_constraintEnd_toStartOf="@+id/previewView"
+        tools:ignore="ImageContrastCheck" />
+    <Button
+        android:visibility="gone"
+        android:id="@+id/btn_pause"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/btn_stop"
+        android:layout_marginStart="16dp"
+        app:layout_constraintTop_toBottomOf="@id/previewView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="pause"
+        android:textAllCaps="false"
+        />
+
+
+
+
+    <FrameLayout
+        android:id="@+id/frame"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/_8dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintStart_toEndOf="@id/guideline5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/previewView"
+        app:layout_constraintBottom_toBottomOf="@id/previewView">
+        <androidx.media3.ui.PlayerView
+            android:id="@+id/video_view"
+            android:layout_width="match_parent"
+            android:layout_gravity="center"
+            android:layout_height="match_parent"
+            app:surface_type="texture_view"
+            app:use_controller="false"
+            />
+
+    </FrameLayout>
+
+    <Button
+        android:id="@+id/btn_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/frame"
+        app:layout_constraintEnd_toEndOf="@id/frame"
+        app:layout_constraintTop_toBottomOf="@id/frame"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:textAllCaps="false"
+        android:text="Lihat Hasil"
+        android:enabled="false"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

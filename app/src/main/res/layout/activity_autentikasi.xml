@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.auth.AutentikasiActivity"
+    >
+
+    <TextView
+        android:id="@+id/text1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="@dimen/_21dp"
+        android:textSize="@dimen/_16dp"
+        android:text="Tutari"/>
+
+    <TextView
+        android:id="@+id/text2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="Selamat Datang"
+        app:layout_constraintTop_toBottomOf="@id/text1"
+        android:layout_marginTop="@dimen/_80dp"
+        style="@style/titleBig"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text2"
+        android:layout_marginTop="@dimen/_8dp"
+        style="@style/titleLocationDesc"
+        android:text="Edukasi Tari, Untuk Kamu"/>
+
+    <ImageView
+        android:layout_width="@dimen/_80dp"
+        android:layout_height="@dimen/_80dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:src="@drawable/icon"
+        android:layout_marginBottom="@dimen/_70dp"/>
+
+    <Button
+        android:id="@+id/masuk"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginHorizontal="@dimen/_16dp"
+        android:layout_marginBottom="@dimen/_60dp"
+        android:text="Masuk"
+        android:background="@drawable/bg_input"
+        android:textAllCaps="false"
+        android:fontFamily="@font/poppins_extrabold"
+        android:textSize="@dimen/_16sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/textInputLayout4"
+        android:layout_marginBottom="16dp"
+        android:text="Username"
+        android:textSize="@dimen/_16sp"
+        android:fontFamily="@font/poppins_medium"
+        android:textColor="@color/black"
+        android:layout_marginStart="16dp"/>
+
+    <ProgressBar
+        android:id="@+id/prgBarMovies"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:progressDrawable="@color/primary"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:indeterminate="true"
+        android:visibility="invisible"
+        android:indeterminateTintMode="src_atop"
+        android:indeterminateTint="@color/primary"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_16dp"
+        android:layout_marginBottom="@dimen/_16dp"
+        style="@style/inputfield"
+        app:endIconMode="clear_text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/masuk"
+        app:hintEnabled="false"
+       >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_regular"
+
+            android:inputType="text" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

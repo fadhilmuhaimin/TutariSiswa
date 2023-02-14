@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "497671503326",
+    "project_id": "tutari-cfcf6",
+    "storage_bucket": "tutari-cfcf6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:497671503326:android:d62b4ca536947c3a6c714f",
+        "android_client_info": {
+          "package_name": "com.autodhil.tutarisiswa"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "497671503326-sqnkkt3i4mljvvubp5vcvni4uomc1mnc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.autodhil.tutarisiswa",
+            "certificate_hash": "415715ec6f873f8afc5edb6c33ba1d1082139961"
+          }
+        },
+        {
+          "client_id": "497671503326-tce4brftu8lhbgls3jukchgse6inh7qq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDIeLhTSo-Zjdix1j1RADBrnKWCjCh6yqY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "497671503326-tce4brftu8lhbgls3jukchgse6inh7qq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
